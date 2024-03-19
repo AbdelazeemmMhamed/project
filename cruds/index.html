@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link rel="stylesheet" type="text/css" href="move.css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<script src="/js/bootstrap.min.js"></script>
+	<title>MOVE</title>
+</head>
+<body>
+ <div class="cruds">
+<div class="head">
+	<h2 class="animate__animated animate__flash">crud</h2>
+	<p class="animate__animated animate__fadeInDown">prodouct managment system</p>
+</div>
+<div class="inpunts">
+	<input type="text" id="title" placeholder="title">
+	<div class="price">
+		<input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+		<input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+		<input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+		<input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+		<small id="total"></small>
+	</div>
+	 <input type="number"placeholder="count" id="count">
+	 <input type="text" id="category" placeholder="category">
+	 <button id="submit"  class="animate__animated animate__flash">create</button>
+</div>
+
+<div class="outputs">
+	<div class="searchblock">
+		<input type="text" id="search" onkeyup="searchData(this.value)" placeholder="search">
+		<div class="btnsearch">
+			<button id="searchtitle" onclick="getsearchMood(this.id)">SEARCH BY TITLE</button>
+			<button id="searchcategory"onclick="getsearchMood(this.id)">SEARCH BY CATEGORY</button>
+		</div>
+	</div>
+	<div id="deleteAll">
+		
+	</div>
+        <table>
+			<tr>
+				<th>id</th>
+				<th>title</th>
+				<th>price</th>
+                 <th>taxes</th>
+				 <th>ads</th>
+				 <th>discount</th>
+				 <th>total</th>
+				 <th>category</th>
+				 <th>update</th>
+				 <th>delete</th>
+			</tr>
+<tbody id="tbody">
+	
+			</tbody>
+		</table>
+
+    </div>
+
+ </div>
+
+
+</body>
+<script src="move.js"></script>
+</html>
+
